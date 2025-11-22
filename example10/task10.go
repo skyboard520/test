@@ -14,7 +14,7 @@ import (
 )
 
 func main() {
-	client, err := ethclient.Dial("https://sepolia.infura.io/v3/e934d08bcce649f9b0fa3f13d5031b5e")
+	client, err := ethclient.Dial("https://sepolia.infura.io/v3/PK")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -23,7 +23,7 @@ func main() {
 	// privateKeyBytes := crypto.FromECDSA(privateKey)
 	// privateKeyHex := hex.EncodeToString(privateKeyBytes)
 	// fmt.Println("Private Key:", privateKeyHex)
-	privateKey, err := crypto.HexToECDSA("私钥")
+	privateKey, err := crypto.HexToECDSA("5a87cd95d606d831c09288a2afcaf57096fbca8bb8a53a09ec49c82d0f1dd238")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -55,8 +55,8 @@ func main() {
 		log.Fatal(err)
 	}
 	auth.Nonce = big.NewInt(int64(nonce))
-	auth.Value = big.NewInt(0)     // in wei
-	auth.GasLimit = uint64(300000) // in units
+	auth.Value = big.NewInt(0)      // in wei
+	auth.GasLimit = uint64(3000000) // in units
 	auth.GasPrice = gasPrice
 
 	input := "1.0"

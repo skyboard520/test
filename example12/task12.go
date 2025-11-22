@@ -18,11 +18,11 @@ import (
 )
 
 const (
-	contractAddr = "0x27010a0A50c9D981508d9F2A9452622D71A80849"
+	contractAddr = "0x6E895603D15a6498648355ECfd82860022F65D4e"
 )
 
 func main() {
-	client, err := ethclient.Dial("https://sepolia.infura.io/v3/e934d08bcce649f9b0fa3f13d5031b5e")
+	client, err := ethclient.Dial("https://sepolia.infura.io/v3/PK")
 	if err != nil {
 		log.Fatal(err)
 	}
